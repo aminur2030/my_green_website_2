@@ -39,9 +39,71 @@ nav ul li a{
   font-weight: 800;
   color: #fff;
   padding: 7px 13px;
+  transition: 0.5s;
 }
 nav ul li a:hover,nav ul li a.active{
-  background-color: rgb(150, 107, 89);
+  background: rgb(150, 107, 89);
   color: black;
   border-radius: 5px;
 }
+#click{
+  display: none;
+}
+.menu_btn{
+  display: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+/* responsive area start. */
+@media only screen and (max-width:940px) {
+    .menu_btn{
+      display: block;
+    }
+    nav ul{
+      
+      position: fixed;
+      top: 80px;
+      background-color: rgb(58, 42, 42);
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+      padding-top: 5px;
+      left: -100%;
+      transition: all 0.5s ease;
+    }  
+    nav ul li{
+      margin: 37px 0;
+    }
+    nav ul li a{
+      font-size: 25px;
+      transition: 0.5s;  
+    }
+    nav ul li a:hover,nav ul li a.active{
+      background:none;
+      color: red;
+    }     
+
+    #click:checked ~ ul{
+      left: 0%;
+    }
+    #click:checked ~ .menu_btn i::before{
+      content: '\f00d';
+    }
+}
+
+/* header section code start from here. */
+header{
+  background-image: url('images/picture.jpg');
+  height: 82vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:cover ;
+}
+
+
+
+
+
+
